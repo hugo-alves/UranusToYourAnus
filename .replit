@@ -12,6 +12,10 @@ author = "agent"
 task = "workflow.run"
 args = "File Structure Check"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Code Review"
+
 [[workflows.workflow]]
 name = "File Structure Check"
 author = "agent"
@@ -25,6 +29,20 @@ task = "packager.installForAll"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "ls -R"
+
+[[workflows.workflow]]
+name = "Code Review"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cat content.js"
 
 [deployment]
 run = ["sh", "-c", "ls -R"]

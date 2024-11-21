@@ -1,7 +1,26 @@
 // Text replacement configuration
 const replacements = [
+    // Original Uranus replacements
     { find: /\bUranus\b/g, replace: 'Your anus' },
-    { find: /\buranus\b/g, replace: 'your anus' }
+    { find: /\buranus\b/g, replace: 'your anus' },
+    
+    // New astronomical puns
+    { find: /\bSaturn's rings\b/g, replace: "Saturn's bling" },
+    { find: /\bsaturn's rings\b/g, replace: "saturn's bling" },
+    { find: /\bDeep space\b/g, replace: 'Deep face' },
+    { find: /\bdeep space\b/g, replace: 'deep face' },
+    { find: /\bBig Bang\b/g, replace: 'Big [REDACTED]' },
+    { find: /\bbig bang\b/g, replace: 'big [REDACTED]' },
+    { find: /\bPenetrating radiation\b/g, replace: 'Penetrating [REDACTED]' },
+    { find: /\bpenetrating radiation\b/g, replace: 'penetrating [REDACTED]' },
+    { find: /\bDark matter\b/g, replace: 'Dank matter' },
+    { find: /\bdark matter\b/g, replace: 'dank matter' },
+    { find: /\bHeavenly body\b/g, replace: 'Heavenly booty' },
+    { find: /\bheavenly body\b/g, replace: 'heavenly booty' },
+    { find: /\bProbe\b/g, replace: '[REDACTED]' },
+    { find: /\bprobe\b/g, replace: '[REDACTED]' },
+    { find: /\bBlack hole\b/g, replace: 'Brown hole' },
+    { find: /\bblack hole\b/g, replace: 'brown hole' }
 ];
 
 // Function to replace text in a text node
