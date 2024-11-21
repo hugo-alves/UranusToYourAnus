@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Uranus Replacer",
+  "version": "1.0",
+  "description": "Replaces instances of 'Uranus' with 'Your anus' on webpages",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.svg",
+    "48": "icons/icon48.svg",
+    "128": "icons/icon128.svg"
+  }
+}

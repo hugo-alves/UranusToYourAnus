@@ -1,0 +1,30 @@
+modules = ["nodejs-20"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "File Structure Check"
+
+[[workflows.workflow]]
+name = "File Structure Check"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "ls -R"
+
+[deployment]
+run = ["sh", "-c", "ls -R"]
